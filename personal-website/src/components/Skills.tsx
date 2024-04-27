@@ -65,6 +65,12 @@ function Skills() {
       image_path: "/logo/rails.png",
       ability: 60,
       experience: "3 Months"
+    },
+    {
+      name: "Python Django",
+      image_path: "/logo/django.png",
+      ability: 60,
+      experience: "1 Month"
     }
   ];
 
@@ -156,25 +162,27 @@ function Skills() {
     });
   }, [api]);
   return (
-    <section className="flex w-full bg-primary text-white pt-8">
+    <section className="flex w-full bg-primary text-white pt-16">
       <div className="flex flex-col w-4/5 items-center justify-center mx-auto gap-16">
         <div className="flex flex-col items-center">
           <h1>Skills</h1>
           <p className="[&:not(:first-child)]:mt-4">
-            Throughout my journey, I've accumulated skills and experience for
-            these listed languages, frameworks, and tools.
+            I leverage a diverse toolkit of modern technologies to bring your
+            web development vision to life. Explore my skillset to see how I can
+            contribute to your project.
           </p>
         </div>
         <div className="flex w-full justify-around items-end">
           <img
-            className="w-[28rem] 2xl:w-[26rem] 3xl:w-[30rem]"
+            className="w-[28rem] 2xl:w-[28rem] 3xl:w-[32rem]"
             src="/secondary-photo.png"
           />
-          <div className="flex flex-col w-1/2 h-full gap-4">
+          <div className="flex flex-col w-1/2 pb-16 gap-4">
             <div className="flex justify-between items-center">
               {skillsHeader.map((header, index) => {
                 return (
                   <p
+                    key={`skill-header-${index}`}
                     className={
                       current === index + 1
                         ? "text-lg font-bold"
@@ -194,13 +202,14 @@ function Skills() {
               setApi={setApi}
             >
               <CarouselContent>
-                {skillsList.map((skillList) => {
+                {skillsList.map((skillList, index) => {
                   return (
-                    <CarouselItem>
+                    <CarouselItem key={`carousel-${index}`}>
                       <div className="flex flex-col gap-4">
-                        {skillList.map((skill) => {
+                        {skillList.map((skill, index) => {
                           return (
                             <SkillProgress
+                              key={`skill-progress-${index}`}
                               name={skill.name}
                               image_path={skill.image_path}
                               ability={skill.ability}

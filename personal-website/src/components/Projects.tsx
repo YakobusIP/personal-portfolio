@@ -1,82 +1,185 @@
-import { Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import ProjectCard from "@/components/ProjectCard";
 
 function Projects() {
+  const projects = [
+    {
+      title: "BNMO Library Website",
+      description: "A simple library website",
+      details:
+        "A website consisting of a frontend and backend side. I created both the frontend and backend as well as designed the database schema.",
+      techStack: [
+        { name: "Frontend", tech: "VueTS" },
+        { name: "Backend", tech: "Ruby on Rails" },
+        { name: "Database", tech: "PostgreSQL" }
+      ],
+      repositoryLinks: [
+        {
+          label: "Frontend Repository",
+          href: "https://github.com/BNMO-Projects/BNMO-Library-Customer"
+        },
+        {
+          label: "Backend Repository",
+          href: "https://github.com/BNMO-Projects/BNMO-Library-BE"
+        }
+      ],
+      tooltip: false
+    },
+    {
+      title: "Personal Chatbot",
+      description: "A simple chat interface to utilize OpenAI GPT APIs",
+      details:
+        "A chat interface utilizing server-sent events (SSE) from OpenAI GPT APIs. Uses LangChain as the LLM framework.",
+      techStack: [
+        { name: "Frontend", tech: "ReactTS" },
+        { name: "Backend", tech: "ExpressTS" },
+        { name: "LLM Framework", tech: "LangChain" }
+      ],
+      repositoryLinks: [
+        {
+          label: "Repository",
+          href: "https://github.com/YakobusIP/personal-chatbot"
+        }
+      ],
+      tooltip: false
+    },
+    {
+      title: "RoadToFit",
+      description:
+        "An android mobile app to help in maintaining the ideal body state and nutritions.",
+      details:
+        "A group project as part of Bangkit 2023 Capstone Project. I created and deployed the consumer backend as well as the ML backend.",
+      techStack: [
+        { name: "Backend", tech: "ExpressTS" },
+        { name: "Database", tech: "PostgreSQL" },
+        { name: "Cloud Service", tech: "Google Cloud Platform" }
+      ],
+      repositoryLinks: [
+        {
+          label: "Consumer Backend Repository",
+          href: "https://github.com/RoadToFit/roadtofit-be"
+        },
+        {
+          label: "Machine Learning Repository",
+          href: "https://github.com/RoadToFit/RoadtoFit-ML"
+        }
+      ],
+      tooltip: false
+    },
+    {
+      title: "Food Delivery App",
+      description: "An android mobile app for food delivery.",
+      details:
+        "I created the mobile user interface as well as the backend and database schema for a simple food delivery app.",
+      techStack: [
+        { name: "Frontend", tech: "Mobile Flutter" },
+        { name: "Backend", tech: "Python DJango" },
+        { name: "CMS", tech: "PostgreSQL" }
+      ],
+      repositoryLinks: [
+        {
+          label: "Repository",
+          href: "https://github.com/YakobusIP/food-delivery-app"
+        }
+      ],
+      tooltip: false
+    },
+    {
+      title: "OSKM ITB 2023",
+      description:
+        "A landing page designed to help students during OSKM ITB 2023 event.",
+      details:
+        "I led the development of this website which includes a landing page as well as a blog page. The blog page uses Ghost CMS to store articles.",
+      techStack: [
+        { name: "Frontend", tech: "ReactTS (NextJS)" },
+        { name: "Backend", tech: "tRPC" },
+        { name: "CMS", tech: "Ghost CMS" }
+      ],
+      repositoryLinks: [
+        { label: "Repository", href: "https://github.com/KATITB2023/oskm-info" }
+      ],
+      tooltip: false
+    },
+    {
+      title: "Binotify Web Music Player",
+      description: "A simple web music player",
+      details:
+        "A group project to complete the Web Based Development class. I helped develop all the components, including the Docker.",
+      techStack: [
+        { name: "Frontend", tech: "PHP and ReactJS" },
+        { name: "Backend", tech: "Java (SOAP) and ExpressJS (REST)" },
+        { name: "Database", tech: "MySQL and PostgreSQL" }
+      ],
+      repositoryLinks: [
+        {
+          label: "Repository",
+          href: "https://github.com/YakobusIP/Tubes-2-WBD-Binotify"
+        }
+      ],
+      tooltip: true,
+      tooltipContent:
+        "This repository was cloned from the original Gitlab repository"
+    },
+    {
+      title: "BNMO Banking Website",
+      description: "A simple banking website.",
+      details:
+        "A banking website with admin and customer sides. I designed the database schema as well as build the application.",
+      techStack: [
+        { name: "Frontend", tech: "VueTS" },
+        { name: "Backend", tech: "Go" },
+        { name: "Database", tech: "PostgreSQL" }
+      ],
+      repositoryLinks: [
+        {
+          label: "Frontend Repository",
+          href: "https://github.com/BNMO-Projects/BNMO-Banking-Frontend"
+        },
+        {
+          label: "Backend Repository",
+          href: "https://github.com/BNMO-Projects/BNMO-Banking-Backend"
+        }
+      ],
+      tooltip: false
+    },
+    {
+      title: "NKR Majika Mobile App",
+      description: "An android mobile app for ordering food.",
+      details:
+        "A group project to complete the Platform Based Development class. I helped develop the twibbon component.",
+      techStack: [
+        { name: "Language", tech: "Kotlin" },
+        {
+          name: "Backend",
+          tech: "Custom (provided as part of the specification)"
+        },
+        { name: "Database", tech: "SQLite (Room Database)" }
+      ],
+      repositoryLinks: [
+        {
+          label: "Repository",
+          href: "https://github.com/sivaren/if3210-2023-android-nkr"
+        }
+      ],
+      tooltip: true,
+      tooltipContent:
+        "This repository was cloned from the original Gitlab repository"
+    }
+  ];
+
   return (
-    <section className="flex w-full h-[90vh] 3xl:h-[80vh] bg-white text-black items-center">
-      <div className="flex w-4/5 items-center justify-around mx-auto">
-        <Card className="h-fit">
-          <CardHeader>
-            <CardTitle>Personal Data</CardTitle>
-            <CardDescription>To know me better</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-col gap-4">
-              <div className="flex flex-col">
-                <p className="font-bold">Full name</p>
-                <p>Yakobus Iryanto Prasethio</p>
-              </div>
-              <div className="flex flex-col">
-                <p className="font-bold">Phone number</p>
-                <p>+62 898-748-1816</p>
-              </div>
-              <div className="flex flex-col">
-                <p className="font-bold">Email</p>
-                <p>yakobusiryantoprasethio@gmail.com</p>
-              </div>
-              <div className="flex flex-col">
-                <p className="font-bold">Nationality</p>
-                <p>Indonesian</p>
-              </div>
-              <Separator />
-            </div>
-          </CardContent>
-          <CardFooter className="justify-center">
-            <Button className="w-full">
-              <Download className="mr-2 h-4 w-4" /> Download my CV
-            </Button>
-          </CardFooter>
-        </Card>
-        <div className="w-3/5">
-          <h1>About Me</h1>
-          <p className="[&:not(:first-child)]:mt-4 text-muted-foreground">
-            A final year student studying Information Technology at Institut
-            Teknologi Bandung with a keen interest in the world of web
-            programming.
-          </p>
-          <p className="[&:not(:first-child)]:mt-6">
-            Hello! I'm Yakobus Iryanto Prasethio, an aspiring web developer
-            based in Indonesia. Currently studying Information Technology in
-            Institut Teknologi Bandung, I have a passion for web development and
-            cloud computing.
-          </p>
-          <p className="[&:not(:first-child)]:mt-6">
-            Professionally, I interned as a Frontend Developer at Andalin, where
-            I was instrumental in enhancing the user interface of the company's
-            websites using VueJS, and innovating payment and quote request
-            features.
-          </p>
-          <p className="[&:not(:first-child)]:mt-6">
-            In my free time, I love to contribute to various projects, such as
-            this personal portfolio website. My technical stack includes
-            proficient use of Typescript, Python, Ruby, and Go, alongside
-            frameworks such as React, Vue, and ChakraUI.
-          </p>
-          <p className="[&:not(:first-child)]:mt-6">
-            Driven by a blend of creativity and analytical skills, I aim to
-            leverage my abilities to solve real-world problems. Nice to meet
-            you!
-          </p>
-        </div>
+    <section className="flex flex-col w-4/5 bg-white text-black justify-center py-16 gap-4">
+      <div className="flex flex-col">
+        <h1>Projects</h1>
+        <p className="[&:not(:first-child)]:mt-4">
+          My portfolio showcases a variety of projects I've tackled, from simple
+          websites to complex applications. Dive in and see how I've applied my
+          skills to solve real-world challenges.
+        </p>
+      </div>
+      <div className="grid grid-cols-2 grid-rows-project gap-4 items-center">
+        {projects.map((project, index) => {
+          return <ProjectCard key={index} {...project} />;
+        })}
       </div>
     </section>
   );

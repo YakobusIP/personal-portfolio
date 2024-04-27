@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="flex w-full m-auto py-4 fixed top-0 text-white bg-primary">
+    <nav className="flex w-full m-auto py-4 fixed top-0 z-[1] text-white bg-primary">
       <div className="flex w-4/5 justify-between items-center m-auto">
         <div className="flex items-center justify-center gap-4">
           <img src="/main-logo.png" className="w-12" />

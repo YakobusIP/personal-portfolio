@@ -20,6 +20,9 @@ module.exports = {
       screens: {
         "3xl": "1920px"
       },
+      gridTemplateRows: {
+        project: "repeat(5, auto)"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
