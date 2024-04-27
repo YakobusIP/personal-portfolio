@@ -4,9 +4,10 @@ type Props = {
   name: string;
   image_path: string;
   ability: number;
+  experience: string;
 };
 
-function SkillProgress({ name, image_path, ability }: Props) {
+function SkillProgress({ name, image_path, ability, experience }: Props) {
   const proficiencyLabel = (ability: number) => {
     switch (ability) {
       case 60:
@@ -33,6 +34,7 @@ function SkillProgress({ name, image_path, ability }: Props) {
           <p>{proficiencyLabel(ability)}</p>
         </div>
         <Progress value={ability} />
+        <p>{experience} Experience</p>
       </div>
     </div>
   );
