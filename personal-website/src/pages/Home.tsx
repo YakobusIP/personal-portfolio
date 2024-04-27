@@ -1,15 +1,17 @@
-import HomeAbout from "@/components/HomeAbout";
-import HomeMain from "@/components/HomeMain";
-import HomeSkills from "@/components/HomeSkills";
+import About from "@/components/About";
+import Intro from "@/components/Intro";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 import { Separator } from "@/components/ui/separator";
 
 function Home() {
   return (
     <>
-      <HomeMain />
-      <HomeAbout />
+      <Intro />
+      <About />
       <Separator className="w-4/5" />
-      <HomeSkills />
+      <Skills />
+      <Projects />
     </>
   );
 }

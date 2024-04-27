@@ -10,7 +10,7 @@ import {
   CarouselPrevious
 } from "@/components/ui/carousel";
 
-function HomeSkills() {
+function Skills() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -157,7 +157,7 @@ function HomeSkills() {
   }, [api]);
   return (
     <section className="flex w-full bg-primary text-white pt-8">
-      <div className="flex flex-col w-4/5 items-center justify-center mx-auto gap-8">
+      <div className="flex flex-col w-4/5 items-center justify-center mx-auto gap-16">
         <div className="flex flex-col items-center">
           <h1>Skills</h1>
           <p className="[&:not(:first-child)]:mt-4">
@@ -170,7 +170,7 @@ function HomeSkills() {
             className="w-[28rem] 2xl:w-[26rem] 3xl:w-[30rem]"
             src="/secondary-photo.png"
           />
-          <div className="flex flex-col w-1/2 h-full gap-4 justify-center">
+          <div className="flex flex-col w-1/2 h-full gap-4">
             <div className="flex justify-between items-center">
               {skillsHeader.map((header, index) => {
                 return (
@@ -223,4 +223,4 @@ function HomeSkills() {
   );
 }
 
-export default HomeSkills;
+export default Skills;

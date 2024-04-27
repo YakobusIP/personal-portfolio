@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
-function HomeAbout() {
+function Projects() {
   return (
     <section className="flex w-full h-[90vh] 3xl:h-[80vh] bg-white text-black items-center">
       <div className="flex w-4/5 items-center justify-around mx-auto">
@@ -82,4 +82,4 @@ function HomeAbout() {
   );
 }
 
-export default HomeAbout;
+export default Projects;

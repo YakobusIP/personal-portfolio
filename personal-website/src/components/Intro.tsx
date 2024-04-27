@@ -1,4 +1,4 @@
-function HomeMain() {
+function Intro() {
   return (
     <section className="flex w-full h-[80vh] bg-primary text-white">
       <div className="flex w-4/5 items-end justify-around mx-auto">
@@ -22,4 +22,4 @@ function HomeMain() {
   );
 }
 
-export default HomeMain;
+export default Intro;
