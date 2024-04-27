@@ -14,6 +14,139 @@ function HomeSkills() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
+  const languageSkills = [
+    {
+      name: "JavaScript/TypeScript",
+      image_path: "/logo/javascript.png",
+      ability: 80,
+      experience: "2 Years"
+    },
+    {
+      name: "Python",
+      image_path: "/logo/python.png",
+      ability: 70,
+      experience: "1 Year"
+    },
+    {
+      name: "Go",
+      image_path: "/logo/go.png",
+      ability: 70,
+      experience: "6 Months"
+    },
+    {
+      name: "Ruby",
+      image_path: "/logo/ruby.png",
+      ability: 60,
+      experience: "3 Months"
+    }
+  ];
+
+  const frameworkSkills = [
+    {
+      name: "React",
+      image_path: "/logo/react.png",
+      ability: 80,
+      experience: "2 Years"
+    },
+    {
+      name: "Vue",
+      image_path: "/logo/vue.png",
+      ability: 80,
+      experience: "1 Year"
+    },
+    {
+      name: "Express",
+      image_path: "/logo/express.png",
+      ability: 80,
+      experience: "2 Years"
+    },
+    {
+      name: "Ruby on Rails",
+      image_path: "/logo/rails.png",
+      ability: 60,
+      experience: "3 Months"
+    }
+  ];
+
+  const databaseSkills = [
+    {
+      name: "PostgreSQL",
+      image_path: "/logo/postgres.png",
+      ability: 80,
+      experience: "2 Years"
+    },
+    {
+      name: "MySQL",
+      image_path: "/logo/mysql.png",
+      ability: 70,
+      experience: "1 Year"
+    },
+    {
+      name: "MongoDB",
+      image_path: "/logo/mongodb.png",
+      ability: 70,
+      experience: "6 Months"
+    },
+    {
+      name: "Redis",
+      image_path: "/logo/redis.png",
+      ability: 60,
+      experience: "3 Months"
+    }
+  ];
+
+  const cloudServiceSkills = [
+    {
+      name: "Google Cloud Platform",
+      image_path: "/logo/gcp.png",
+      ability: 70,
+      experience: "6 Months"
+    },
+    {
+      name: "Netlify",
+      image_path: "/logo/netlify.png",
+      ability: 70,
+      experience: "6 Months"
+    },
+    {
+      name: "Vercel",
+      image_path: "/logo/vercel.png",
+      ability: 60,
+      experience: "1 Month"
+    }
+  ];
+
+  const toolSkills = [
+    {
+      name: "Git",
+      image_path: "/logo/git.png",
+      ability: 90,
+      experience: "3 Years"
+    },
+    {
+      name: "Docker",
+      image_path: "/logo/docker.webp",
+      ability: 70,
+      experience: "1 Year"
+    }
+  ];
+
+  const skillsList = [
+    languageSkills,
+    frameworkSkills,
+    databaseSkills,
+    cloudServiceSkills,
+    toolSkills
+  ];
+
+  const skillsHeader = [
+    "Languages",
+    "Frameworks",
+    "Databases",
+    "Cloud Services",
+    "Tools"
+  ];
+
   useEffect(() => {
     if (!api) return;
 
@@ -39,41 +172,19 @@ function HomeSkills() {
           />
           <div className="flex flex-col w-1/2 h-full gap-4 justify-center">
             <div className="flex justify-between items-center">
-              <p
-                className={
-                  current === 1 ? "text-lg font-bold" : "text-base font-normal"
-                }
-              >
-                Languages
-              </p>
-              <p
-                className={
-                  current === 2 ? "text-lg font-bold" : "text-base font-normal"
-                }
-              >
-                Frameworks
-              </p>
-              <p
-                className={
-                  current === 3 ? "text-lg font-bold" : "text-base font-normal"
-                }
-              >
-                Databases
-              </p>
-              <p
-                className={
-                  current === 4 ? "text-lg font-bold" : "text-base font-normal"
-                }
-              >
-                Cloud Services
-              </p>
-              <p
-                className={
-                  current === 5 ? "text-lg font-bold" : "text-base font-normal"
-                }
-              >
-                Tools
-              </p>
+              {skillsHeader.map((header, index) => {
+                return (
+                  <p
+                    className={
+                      current === index + 1
+                        ? "text-lg font-bold"
+                        : "text-base font-normal"
+                    }
+                  >
+                    {header}
+                  </p>
+                );
+              })}
             </div>
             <Separator />
 
@@ -83,129 +194,24 @@ function HomeSkills() {
               setApi={setApi}
             >
               <CarouselContent>
-                <CarouselItem>
-                  <div className="flex flex-col gap-4">
-                    <SkillProgress
-                      name="JavaScript/TypeScript"
-                      image_path="/logo/javascript.png"
-                      ability={80}
-                      experience="2 Years"
-                    />
-                    <SkillProgress
-                      name="Python"
-                      image_path="/logo/python.png"
-                      ability={70}
-                      experience="1 Year"
-                    />
-                    <SkillProgress
-                      name="Go"
-                      image_path="/logo/go.png"
-                      ability={70}
-                      experience="6 Months"
-                    />
-                    <SkillProgress
-                      name="Ruby"
-                      image_path="/logo/ruby.png"
-                      ability={60}
-                      experience="3 Months"
-                    />
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="flex flex-col gap-4">
-                    <SkillProgress
-                      name="React"
-                      image_path="/logo/react.png"
-                      ability={80}
-                      experience="2 Years"
-                    />
-                    <SkillProgress
-                      name="Vue"
-                      image_path="/logo/vue.png"
-                      ability={80}
-                      experience="1 Year"
-                    />
-                    <SkillProgress
-                      name="Express"
-                      image_path="/logo/express.png"
-                      ability={80}
-                      experience="2 Years"
-                    />
-                    <SkillProgress
-                      name="Ruby on Rails"
-                      image_path="/logo/rails.png"
-                      ability={60}
-                      experience="3 Months"
-                    />
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="flex flex-col gap-4">
-                    <SkillProgress
-                      name="PostgreSQL"
-                      image_path="/logo/postgres.png"
-                      ability={80}
-                      experience="2 Years"
-                    />
-                    <SkillProgress
-                      name="MySQL"
-                      image_path="/logo/mysql.png"
-                      ability={70}
-                      experience="1 Year"
-                    />
-                    <SkillProgress
-                      name="MongoDB"
-                      image_path="/logo/mongodb.png"
-                      ability={70}
-                      experience="6 Months"
-                    />
-                    <SkillProgress
-                      name="Redis"
-                      image_path="/logo/redis.png"
-                      ability={60}
-                      experience="3 Months"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem>
-                  <div className="flex flex-col gap-4">
-                    <SkillProgress
-                      name="Google Cloud Platform"
-                      image_path="/logo/gcp.png"
-                      ability={70}
-                      experience="6 Months"
-                    />
-                    <SkillProgress
-                      name="Netlify"
-                      image_path="/logo/netlify.png"
-                      ability={70}
-                      experience="6 Months"
-                    />
-                    <SkillProgress
-                      name="Vercel"
-                      image_path="/logo/vercel.png"
-                      ability={60}
-                      experience="1 Month"
-                    />
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="flex flex-col gap-4">
-                    <SkillProgress
-                      name="Git"
-                      image_path="/logo/git.png"
-                      ability={80}
-                      experience="3 Years"
-                    />
-                    <SkillProgress
-                      name="Docker"
-                      image_path="/logo/docker.webp"
-                      ability={70}
-                      experience="1 Year"
-                    />
-                  </div>
-                </CarouselItem>
+                {skillsList.map((skillList) => {
+                  return (
+                    <CarouselItem>
+                      <div className="flex flex-col gap-4">
+                        {skillList.map((skill) => {
+                          return (
+                            <SkillProgress
+                              name={skill.name}
+                              image_path={skill.image_path}
+                              ability={skill.ability}
+                              experience={skill.experience}
+                            />
+                          );
+                        })}
+                      </div>
+                    </CarouselItem>
+                  );
+                })}
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
