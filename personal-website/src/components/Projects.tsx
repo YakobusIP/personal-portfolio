@@ -5,6 +5,7 @@ function Projects() {
     {
       title: "BNMO Library Website",
       description: "A simple library website",
+      badges: ["Solo Project", "2024", "Work-in-progress"],
       details:
         "A website consisting of a frontend and backend side. I created both the frontend and backend as well as designed the database schema.",
       techStack: [
@@ -27,6 +28,7 @@ function Projects() {
     {
       title: "Personal Chatbot",
       description: "A simple chat interface to utilize OpenAI GPT APIs",
+      badges: ["Solo Project", "2024", "Completed"],
       details:
         "A chat interface utilizing server-sent events (SSE) from OpenAI GPT APIs. Uses LangChain as the LLM framework.",
       techStack: [
@@ -46,6 +48,7 @@ function Projects() {
       title: "RoadToFit",
       description:
         "An android mobile app to help in maintaining the ideal body state and nutritions.",
+      badges: ["Group Project", "2024", "Completed"],
       details:
         "A group project as part of Bangkit 2023 Capstone Project. I created and deployed the consumer backend as well as the ML backend.",
       techStack: [
@@ -68,11 +71,12 @@ function Projects() {
     {
       title: "Food Delivery App",
       description: "An android mobile app for food delivery.",
+      badges: ["Solo Project", "2024", "Completed"],
       details:
         "I created the mobile user interface as well as the backend and database schema for a simple food delivery app.",
       techStack: [
         { name: "Frontend", tech: "Mobile Flutter" },
-        { name: "Backend", tech: "Python DJango" },
+        { name: "Backend", tech: "Python Django" },
         { name: "CMS", tech: "PostgreSQL" }
       ],
       repositoryLinks: [
@@ -87,6 +91,7 @@ function Projects() {
       title: "OSKM ITB 2023",
       description:
         "A landing page designed to help students during OSKM ITB 2023 event.",
+      badges: ["Group Project", "Project Leader", "2023", "Completed"],
       details:
         "I led the development of this website which includes a landing page as well as a blog page. The blog page uses Ghost CMS to store articles.",
       techStack: [
@@ -100,8 +105,33 @@ function Projects() {
       tooltip: false
     },
     {
+      title: "NKR Majika Mobile App",
+      description: "An android mobile app for ordering food.",
+      badges: ["Group Project", "2023", "Completed"],
+      details:
+        "A group project to complete the Platform Based Development class. I helped develop the twibbon component.",
+      techStack: [
+        { name: "Language", tech: "Kotlin" },
+        {
+          name: "Backend",
+          tech: "Custom (provided as part of the specification)"
+        },
+        { name: "Database", tech: "SQLite (Room Database)" }
+      ],
+      repositoryLinks: [
+        {
+          label: "Repository",
+          href: "https://github.com/sivaren/if3210-2023-android-nkr"
+        }
+      ],
+      tooltip: true,
+      tooltipContent:
+        "This repository was cloned from the original Gitlab repository"
+    },
+    {
       title: "Binotify Web Music Player",
       description: "A simple web music player",
+      badges: ["Group Project", "2022", "Completed"],
       details:
         "A group project to complete the Web Based Development class. I helped develop all the components, including the Docker.",
       techStack: [
@@ -122,6 +152,7 @@ function Projects() {
     {
       title: "BNMO Banking Website",
       description: "A simple banking website.",
+      badges: ["Solo Project", "2022", "Completed"],
       details:
         "A banking website with admin and customer sides. I designed the database schema as well as build the application.",
       techStack: [
@@ -140,29 +171,6 @@ function Projects() {
         }
       ],
       tooltip: false
-    },
-    {
-      title: "NKR Majika Mobile App",
-      description: "An android mobile app for ordering food.",
-      details:
-        "A group project to complete the Platform Based Development class. I helped develop the twibbon component.",
-      techStack: [
-        { name: "Language", tech: "Kotlin" },
-        {
-          name: "Backend",
-          tech: "Custom (provided as part of the specification)"
-        },
-        { name: "Database", tech: "SQLite (Room Database)" }
-      ],
-      repositoryLinks: [
-        {
-          label: "Repository",
-          href: "https://github.com/sivaren/if3210-2023-android-nkr"
-        }
-      ],
-      tooltip: true,
-      tooltipContent:
-        "This repository was cloned from the original Gitlab repository"
     }
   ];
 

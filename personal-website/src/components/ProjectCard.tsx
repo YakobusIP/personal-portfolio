@@ -15,6 +15,7 @@ import {
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 type TechStackItem = {
   name: string;
@@ -29,6 +30,7 @@ type RepositoryLinkItem = {
 type Props = {
   title: string;
   description: string;
+  badges: Array<string>;
   details: string;
   techStack: Array<TechStackItem>;
   repositoryLinks: Array<RepositoryLinkItem>;
@@ -39,6 +41,7 @@ type Props = {
 function ProjectCard({
   title,
   description,
+  badges,
   details,
   techStack,
   repositoryLinks,
@@ -53,6 +56,11 @@ function ProjectCard({
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-4">
+          <div className="flex gap-2">
+            {badges.map((badge, index) => {
+              return <Badge key={`badge-${index}`}>{badge}</Badge>;
+            })}
+          </div>
           <p>{details}</p>
           <Separator />
           <div className="flex flex-col">

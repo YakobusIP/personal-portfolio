@@ -17,7 +17,9 @@ function About() {
         <Card className="h-fit">
           <CardHeader>
             <CardTitle>Personal Data</CardTitle>
-            <CardDescription>To know me better</CardDescription>
+            <CardDescription>
+              Feel free to connect using the information below.
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-4">
