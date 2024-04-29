@@ -16,7 +16,7 @@ function Experience() {
     <section
       id="experience"
       ref={experienceRef}
-      className="flex w-full h-fit bg-white text-black items-center py-16"
+      className="flex w-full h-fit bg-white text-black items-center py-8 xl:py-16"
     >
       <div className="flex flex-col w-4/5 mx-auto gap-4">
         <div className="flex flex-col">
@@ -29,9 +29,9 @@ function Experience() {
         <Card>
           <CardHeader>
             <CardTitle>Cloud Computing Cohort - Google Bangkit</CardTitle>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col xl:flex-row xl:items-center gap-2">
               <CardDescription>August 2023 - January 2024</CardDescription>
-              <Badge>Apprenticeship</Badge>
+              <Badge className="w-fit">Apprenticeship</Badge>
             </div>
           </CardHeader>
           <CardContent>
@@ -53,35 +53,35 @@ function Experience() {
               </li>
             </ul>
           </CardContent>
-          <CardFooter>
-            <div className="flex gap-2">
-              <a
-                href="https://drive.google.com/file/d/1YQ_sPCEpSGSAyfUgNTse9pQs_IacgtNa/view?usp=sharing"
-                target="_blank"
-              >
-                <Button>Final Report</Button>
-              </a>
-              <a
-                href="https://google.accredible.com/40740bbb-d892-4677-9bcf-1385b3c067d0"
-                target="_blank"
-              >
-                <Button>
-                  <div className="flex gap-2 justify-center items-center">
-                    <img src="/logo/gcp.png" className="h-4" />
-                    Associate Cloud Engineer Certification
-                  </div>
-                </Button>
-              </a>
-            </div>
+          <CardFooter className="flex-col xl:flex-row gap-2">
+            <a
+              href="https://drive.google.com/file/d/1YQ_sPCEpSGSAyfUgNTse9pQs_IacgtNa/view?usp=sharing"
+              target="_blank"
+              className="w-full xl:w-fit"
+            >
+              <Button className="w-full xl:w-fit">Final Report</Button>
+            </a>
+            <a
+              href="https://google.accredible.com/40740bbb-d892-4677-9bcf-1385b3c067d0"
+              target="_blank"
+              className="w-full xl:w-fit"
+            >
+              <Button className="w-full xl:w-fit">
+                <div className="flex gap-2 justify-center items-center">
+                  <img src="/logo/gcp.png" className="h-4" />
+                  Google ACE Certificate
+                </div>
+              </Button>
+            </a>
           </CardFooter>
         </Card>
 
         <Card>
           <CardHeader>
             <CardTitle>Frontend Developer - Andalin</CardTitle>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col xl:flex-row xl:items-center gap-2">
               <CardDescription>May 2023 - August 2023</CardDescription>
-              <Badge>Internship</Badge>
+              <Badge className="w-fit">Internship</Badge>
             </div>
           </CardHeader>
           <CardContent>
@@ -106,9 +106,9 @@ function Experience() {
         <Card>
           <CardHeader>
             <CardTitle>Programming Laboratory Assistant</CardTitle>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col xl:flex-row xl:items-center gap-2">
               <CardDescription>July 2022 - Present</CardDescription>
-              <Badge>Lecturer Assistant</Badge>
+              <Badge className="w-fit">Lecturer Assistant</Badge>
             </div>
           </CardHeader>
           <CardContent>

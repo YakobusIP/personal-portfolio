@@ -49,7 +49,7 @@ function Projects() {
     {
       title: "RoadToFit",
       description:
-        "An android mobile app to help in maintaining the ideal body state and nutritions.",
+        "An android mobile app check current body state and nutritions.",
       badges: ["Group Project", "2024", "Completed"],
       details:
         "A group project as part of Bangkit 2023 Capstone Project. I created and deployed the consumer backend as well as the ML backend.",
@@ -95,7 +95,7 @@ function Projects() {
         "A landing page designed to help students during OSKM ITB 2023 event.",
       badges: ["Group Project", "Project Leader", "2023", "Completed"],
       details:
-        "I led the development of this website which includes a landing page as well as a blog page. The blog page uses Ghost CMS to store articles.",
+        "I led the development of this website which includes a blog page. The blog page uses Ghost CMS to store articles.",
       techStack: [
         { name: "Frontend", tech: "ReactTS (NextJS)" },
         { name: "Backend", tech: "tRPC" },
@@ -180,7 +180,7 @@ function Projects() {
     <section
       id="projects"
       ref={projectsRef}
-      className="flex w-full bg-white text-black justify-center py-16"
+      className="flex w-full bg-white text-black justify-center py-8 xl:py-16"
     >
       <div className="flex flex-col w-4/5 mx-auto gap-4">
         <div className="flex flex-col">
@@ -191,7 +191,7 @@ function Projects() {
             applied my skills to solve real-world challenges.
           </p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-project gap-4 items-center">
+        <div className="grid grid-cols-1 xl:grid-cols-2 grid-rows-project gap-4 items-center">
           {projects.map((project, index) => {
             return <ProjectCard key={index} {...project} />;
           })}

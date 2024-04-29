@@ -10,6 +10,7 @@ import {
   CarouselPrevious
 } from "@/components/ui/carousel";
 import { useScrollContext } from "@/contexts/ScrollContext";
+import AutoPlay from "embla-carousel-autoplay";
 
 function Skills() {
   const { skillsRef } = useScrollContext();
@@ -167,12 +168,12 @@ function Skills() {
     <section
       id="skills"
       ref={skillsRef}
-      className="flex w-full bg-primary text-white pt-16"
+      className="flex w-full bg-primary text-white pt-8 xl:pt-16"
     >
       <div className="flex flex-col w-4/5 items-center justify-center mx-auto gap-16">
-        <div className="flex flex-col items-center">
-          <h1>Skills</h1>
-          <p className="[&:not(:first-child)]:mt-4">
+        <div className="flex flex-col">
+          <h1 className="text-left xl:text-center">Skills</h1>
+          <p className="[&:not(:first-child)]:mt-4 text-left xl:text-center">
             I leverage a diverse toolkit of modern technologies to bring your
             web development vision to life. Explore my skillset to see how I can
             contribute to your project.
@@ -180,10 +181,10 @@ function Skills() {
         </div>
         <div className="flex w-full justify-around items-end">
           <img
-            className="w-[28rem] 2xl:w-[28rem] 3xl:w-[32rem]"
+            className="hidden xl:block w-[28rem] 2xl:w-[28rem] 3xl:w-[32rem]"
             src="/secondary-photo.png"
           />
-          <div className="flex flex-col w-1/2 pb-16 gap-4">
+          <div className="flex flex-col w-full xl:w-1/2 pb-8 xl:pb-16 gap-4">
             <div className="flex justify-between items-center">
               {skillsHeader.map((header, index) => {
                 return (
@@ -191,8 +192,8 @@ function Skills() {
                     key={`skill-header-${index}`}
                     className={
                       current === index + 1
-                        ? "text-lg font-bold"
-                        : "text-base font-normal"
+                        ? "text-lg font-bold w-full xl:w-fit text-center"
+                        : "hidden xl:block text-base font-normal"
                     }
                   >
                     {header}
@@ -205,6 +206,7 @@ function Skills() {
             <Carousel
               className="w-full h-fit"
               opts={{ align: "start", loop: true }}
+              plugins={[AutoPlay({ delay: 8000, stopOnInteraction: false })]}
               setApi={setApi}
             >
               <CarouselContent>
@@ -228,8 +230,8 @@ function Skills() {
                   );
                 })}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="hidden xl:inline-flex" />
+              <CarouselNext className="hidden xl:inline-flex" />
             </Carousel>
           </div>
         </div>

@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useActiveSectionContext } from "@/contexts/ActiveSectionContext";
 import { useScrollContext } from "@/contexts/ScrollContext";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 function Navbar() {
   const { introRef, aboutRef, experienceRef, skillsRef, projectsRef } =
@@ -8,16 +17,23 @@ function Navbar() {
 
   const { activeSection, setActiveSection } = useActiveSectionContext();
 
+  const [openSheet, setOpenSheet] = useState(false);
+
   const scrollToElement = (
     ref: React.RefObject<HTMLDivElement>,
-    name: string
+    name: string,
+    mobile: boolean
   ) => {
     if (ref.current) {
-      const yOffset = -50;
+      const yOffset = mobile ? -75 : -50;
       const y =
         ref.current.getBoundingClientRect().top + window.scrollY + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
       setActiveSection(name);
+    }
+
+    if (mobile) {
+      setOpenSheet(false);
     }
   };
   return (
@@ -25,11 +41,11 @@ function Navbar() {
       <div className="flex w-4/5 justify-between items-center m-auto">
         <div className="flex items-center justify-center gap-4">
           <img src="/main-logo.png" className="w-12" />
-          <h3>Yakobus Iryanto</h3>
+          <h3 className="hidden xl:block">Yakobus Iryanto</h3>
         </div>
-        <div className="flex w-2/5 justify-between">
+        <div className="hidden xl:flex w-2/5 justify-between">
           <p
-            onClick={() => scrollToElement(introRef, "intro")}
+            onClick={() => scrollToElement(introRef, "intro", false)}
             className={`hover:cursor-pointer hover:underline underline-offset-4 ${
               activeSection === "intro" ? "underline" : undefined
             }`}
@@ -37,7 +53,7 @@ function Navbar() {
             Home
           </p>
           <p
-            onClick={() => scrollToElement(aboutRef, "about")}
+            onClick={() => scrollToElement(aboutRef, "about", false)}
             className={`hover:cursor-pointer hover:underline underline-offset-4 ${
               activeSection === "about" ? "underline" : undefined
             }`}
@@ -45,7 +61,7 @@ function Navbar() {
             About
           </p>
           <p
-            onClick={() => scrollToElement(experienceRef, "experience")}
+            onClick={() => scrollToElement(experienceRef, "experience", false)}
             className={`hover:cursor-pointer hover:underline underline-offset-4 ${
               activeSection === "experience" ? "underline" : undefined
             }`}
@@ -53,7 +69,7 @@ function Navbar() {
             Experience
           </p>
           <p
-            onClick={() => scrollToElement(skillsRef, "skills")}
+            onClick={() => scrollToElement(skillsRef, "skills", false)}
             className={`hover:cursor-pointer hover:underline underline-offset-4 ${
               activeSection === "skills" ? "underline" : undefined
             }`}
@@ -61,7 +77,7 @@ function Navbar() {
             Skills
           </p>
           <p
-            onClick={() => scrollToElement(projectsRef, "projects")}
+            onClick={() => scrollToElement(projectsRef, "projects", false)}
             className={`hover:cursor-pointer hover:underline underline-offset-4 ${
               activeSection === "projects" ? "underline" : undefined
             }`}
@@ -69,6 +85,50 @@ function Navbar() {
             Projects
           </p>
         </div>
+        <Sheet open={openSheet} onOpenChange={setOpenSheet}>
+          <SheetTrigger className="block xl:hidden">
+            <Menu />
+          </SheetTrigger>
+          <SheetContent side={"left"}>
+            <div className="flex flex-col justify-between h-full">
+              <div className="flex flex-col ">
+                <SheetHeader>
+                  <SheetTitle>
+                    <img src="/main-logo.png" className="w-12" />
+                  </SheetTitle>
+                </SheetHeader>
+                <div className="flex flex-col gap-4 pt-4">
+                  <p onClick={() => scrollToElement(introRef, "intro", true)}>
+                    Home
+                  </p>
+                  <p onClick={() => scrollToElement(aboutRef, "about", true)}>
+                    About
+                  </p>
+                  <p
+                    onClick={() =>
+                      scrollToElement(experienceRef, "experience", true)
+                    }
+                  >
+                    Experience
+                  </p>
+                  <p onClick={() => scrollToElement(skillsRef, "skills", true)}>
+                    Skills
+                  </p>
+                  <p
+                    onClick={() =>
+                      scrollToElement(projectsRef, "projects", true)
+                    }
+                  >
+                    Projects
+                  </p>
+                </div>
+              </div>
+              <SheetDescription className="place-content-end">
+                &#169; Yakobus Iryanto Prasethio {new Date().getFullYear()}
+              </SheetDescription>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   );

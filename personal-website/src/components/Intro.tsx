@@ -6,10 +6,10 @@ function Intro() {
     <section
       id="intro"
       ref={introRef}
-      className="flex w-full h-[80vh] bg-primary text-white"
+      className="flex w-full h-fit xl:h-[80vh] bg-primary text-white"
     >
-      <div className="flex w-4/5 items-end justify-around mx-auto">
-        <div className="flex flex-col h-full justify-center gap-4">
+      <div className="flex flex-col xl:flex-row w-4/5 items-center xl:items-end justify-around mx-auto gap-4">
+        <div className="flex flex-col h-full justify-center text-center xl:text-left gap-4 pt-24 xl:pt-0">
           <h3>Hello</h3>
           <h1>I'm Yakobus Iryanto Prasethio</h1>
           <h2>Web Developer</h2>

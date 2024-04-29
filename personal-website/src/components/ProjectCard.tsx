@@ -56,9 +56,13 @@ function ProjectCard({
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-4">
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {badges.map((badge, index) => {
-              return <Badge key={`badge-${index}`}>{badge}</Badge>;
+              return (
+                <Badge key={`badge-${index}`} className="w-fit">
+                  {badge}
+                </Badge>
+              );
             })}
           </div>
           <p>{details}</p>
@@ -77,7 +81,7 @@ function ProjectCard({
           </div>
         </div>
       </CardContent>
-      <CardFooter className="gap-4">
+      <CardFooter className="flex-col xl:flex-row gap-4">
         {repositoryLinks.map((link, index) => {
           return tooltip ? (
             <a

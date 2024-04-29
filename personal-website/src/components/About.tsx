@@ -17,9 +17,9 @@ function About() {
     <section
       id="about"
       ref={aboutRef}
-      className="flex w-full h-fit bg-white text-black items-center py-16"
+      className="flex w-full h-fit bg-white text-black items-center py-8 xl:py-16"
     >
-      <div className="flex w-4/5 items-center justify-around mx-auto">
+      <div className="flex flex-col xl:flex-row w-4/5 items-center justify-around mx-auto gap-4">
         <Card className="h-fit">
           <CardHeader>
             <CardTitle>Personal Data</CardTitle>
@@ -56,7 +56,7 @@ function About() {
             </a>
           </CardFooter>
         </Card>
-        <div className="w-3/5">
+        <div className="w-full xl:w-3/5">
           <h1>About Me</h1>
           <p className="[&:not(:first-child)]:mt-4 text-muted-foreground">
             A final year student studying Information Technology at Institut
