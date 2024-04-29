@@ -1,6 +1,8 @@
 import ProjectCard from "@/components/ProjectCard";
+import { useScrollContext } from "@/contexts/ScrollContext";
 
 function Projects() {
+  const { projectsRef } = useScrollContext();
   const projects = [
     {
       title: "BNMO Library Website",
@@ -175,19 +177,25 @@ function Projects() {
   ];
 
   return (
-    <section className="flex flex-col w-4/5 bg-white text-black justify-center py-16 gap-4">
-      <div className="flex flex-col">
-        <h1>Projects</h1>
-        <p className="[&:not(:first-child)]:mt-4">
-          My portfolio showcases a variety of projects I've tackled, from simple
-          websites to complex applications. Dive in and see how I've applied my
-          skills to solve real-world challenges.
-        </p>
-      </div>
-      <div className="grid grid-cols-2 grid-rows-project gap-4 items-center">
-        {projects.map((project, index) => {
-          return <ProjectCard key={index} {...project} />;
-        })}
+    <section
+      id="projects"
+      ref={projectsRef}
+      className="flex w-full bg-white text-black justify-center py-16"
+    >
+      <div className="flex flex-col w-4/5 mx-auto gap-4">
+        <div className="flex flex-col">
+          <h1>Projects</h1>
+          <p className="[&:not(:first-child)]:mt-4">
+            My portfolio showcases a variety of projects I've tackled, from
+            simple websites to complex applications. Dive in and see how I've
+            applied my skills to solve real-world challenges.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 grid-rows-project gap-4 items-center">
+          {projects.map((project, index) => {
+            return <ProjectCard key={index} {...project} />;
+          })}
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,13 @@
+import { useScrollContext } from "@/contexts/ScrollContext";
+
 function Intro() {
+  const { introRef } = useScrollContext();
   return (
-    <section className="flex w-full h-[80vh] bg-primary text-white">
+    <section
+      id="intro"
+      ref={introRef}
+      className="flex w-full h-[80vh] bg-primary text-white"
+    >
       <div className="flex w-4/5 items-end justify-around mx-auto">
         <div className="flex flex-col h-full justify-center gap-4">
           <h3>Hello</h3>

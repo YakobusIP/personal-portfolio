@@ -9,8 +9,10 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/carousel";
+import { useScrollContext } from "@/contexts/ScrollContext";
 
 function Skills() {
+  const { skillsRef } = useScrollContext();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -162,7 +164,11 @@ function Skills() {
     });
   }, [api]);
   return (
-    <section className="flex w-full bg-primary text-white pt-16">
+    <section
+      id="skills"
+      ref={skillsRef}
+      className="flex w-full bg-primary text-white pt-16"
+    >
       <div className="flex flex-col w-4/5 items-center justify-center mx-auto gap-16">
         <div className="flex flex-col items-center">
           <h1>Skills</h1>

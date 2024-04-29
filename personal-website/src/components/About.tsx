@@ -9,10 +9,16 @@ import {
   CardTitle
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { useScrollContext } from "@/contexts/ScrollContext";
 
 function About() {
+  const { aboutRef } = useScrollContext();
   return (
-    <section className="flex w-full h-fit bg-white text-black items-center py-16">
+    <section
+      id="about"
+      ref={aboutRef}
+      className="flex w-full h-fit bg-white text-black items-center py-16"
+    >
       <div className="flex w-4/5 items-center justify-around mx-auto">
         <Card className="h-fit">
           <CardHeader>
@@ -43,9 +49,11 @@ function About() {
             </div>
           </CardContent>
           <CardFooter className="justify-center">
-            <Button className="w-full">
-              <Download className="mr-2 h-4 w-4" /> Download my CV
-            </Button>
+            <a href="/docs/CV Yakobus Iryanto Prasethio.pdf" download>
+              <Button className="w-full">
+                <Download className="mr-2 h-4 w-4" /> Download my CV
+              </Button>
+            </a>
           </CardFooter>
         </Card>
         <div className="w-3/5">

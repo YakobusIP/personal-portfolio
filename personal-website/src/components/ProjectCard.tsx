@@ -88,7 +88,7 @@ function ProjectCard({
             >
               <TooltipProvider delayDuration={200}>
                 <Tooltip>
-                  <TooltipTrigger className="w-full">
+                  <TooltipTrigger className="w-full" asChild>
                     <Button className="w-full gap-2">
                       <img src="/icons/github.webp" className="w-4" />
                       {link.label}

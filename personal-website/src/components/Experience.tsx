@@ -8,10 +8,16 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useScrollContext } from "@/contexts/ScrollContext";
 
 function Experience() {
+  const { experienceRef } = useScrollContext();
   return (
-    <section className="flex w-full h-fit bg-white text-black items-center py-16">
+    <section
+      id="experience"
+      ref={experienceRef}
+      className="flex w-full h-fit bg-white text-black items-center py-16"
+    >
       <div className="flex flex-col w-4/5 mx-auto gap-4">
         <div className="flex flex-col">
           <h1>Experience</h1>
@@ -23,12 +29,10 @@ function Experience() {
         <Card>
           <CardHeader>
             <CardTitle>Cloud Computing Cohort - Google Bangkit</CardTitle>
-            <CardDescription>
-              <div className="flex items-center gap-2">
-                August 2023 - January 2024
-                <Badge>Apprenticeship</Badge>
-              </div>
-            </CardDescription>
+            <div className="flex items-center gap-2">
+              <CardDescription>August 2023 - January 2024</CardDescription>
+              <Badge>Apprenticeship</Badge>
+            </div>
           </CardHeader>
           <CardContent>
             <p>
@@ -40,7 +44,7 @@ function Experience() {
                 Engaged in an intensive tech career readiness program designed
                 by Google, focusing on developing cloud computing abilities from
                 courses platform such as Dicoding, Coursera, and Google Cloud
-                Skills Boost (GCSB)
+                Skills Boost (GCSB).
               </li>
               <li>
                 Achieved outstanding results, successfully completed the
@@ -75,12 +79,10 @@ function Experience() {
         <Card>
           <CardHeader>
             <CardTitle>Frontend Developer - Andalin</CardTitle>
-            <CardDescription>
-              <div className="flex items-center gap-2">
-                May 2023 - August 2023
-                <Badge>Internship</Badge>
-              </div>
-            </CardDescription>
+            <div className="flex items-center gap-2">
+              <CardDescription>May 2023 - August 2023</CardDescription>
+              <Badge>Internship</Badge>
+            </div>
           </CardHeader>
           <CardContent>
             <p>A digital freight forwarder company operating in Indonesia</p>
@@ -104,12 +106,10 @@ function Experience() {
         <Card>
           <CardHeader>
             <CardTitle>Programming Laboratory Assistant</CardTitle>
-            <CardDescription>
-              <div className="flex items-center gap-2">
-                July 2022 - Present
-                <Badge>Lecturer Assistant</Badge>
-              </div>
-            </CardDescription>
+            <div className="flex items-center gap-2">
+              <CardDescription>July 2022 - Present</CardDescription>
+              <Badge>Lecturer Assistant</Badge>
+            </div>
           </CardHeader>
           <CardContent>
             <ul className="ml-6 list-disc [&>li]:mt-2">
