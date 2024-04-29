@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import SkillProgress from "./SkillProgress";
-import { Separator } from "./ui/separator";
+import SkillProgress from "@/components/SkillProgress";
+import { Separator } from "@/components/ui/separator";
 import {
   Carousel,
   CarouselApi,
