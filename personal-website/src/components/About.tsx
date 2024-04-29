@@ -49,7 +49,12 @@ function About() {
             </div>
           </CardContent>
           <CardFooter className="justify-center">
-            <a href="/docs/CV Yakobus Iryanto Prasethio.pdf" download>
+            <a
+              href={`${
+                import.meta.env.BASE_URL
+              }docs/CV Yakobus Iryanto Prasethio.pdf`}
+              download
+            >
               <Button className="w-full">
                 <Download className="mr-2 h-4 w-4" /> Download my CV
               </Button>

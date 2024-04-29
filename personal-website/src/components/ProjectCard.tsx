@@ -94,7 +94,10 @@ function ProjectCard({
                 <Tooltip>
                   <TooltipTrigger className="w-full" asChild>
                     <Button className="w-full gap-2">
-                      <img src="/icons/github.webp" className="w-4" />
+                      <img
+                        src={`${import.meta.env.BASE_URL}icons/github.webp`}
+                        className="w-4"
+                      />
                       {link.label}
                     </Button>
                   </TooltipTrigger>
@@ -112,7 +115,10 @@ function ProjectCard({
               className="w-full"
             >
               <Button className="w-full gap-2">
-                <img src="/icons/github.webp" className="w-4" />
+                <img
+                  src={`${import.meta.env.BASE_URL}icons/github.webp`}
+                  className="w-4"
+                />
                 {link.label}
               </Button>
             </a>

@@ -40,7 +40,10 @@ function Navbar() {
     <nav className="flex w-full m-auto py-4 fixed top-0 z-[1] text-white bg-primary">
       <div className="flex w-4/5 justify-between items-center m-auto">
         <div className="flex items-center justify-center gap-4">
-          <img src="/main-logo.png" className="w-12" />
+          <img
+            src={`${import.meta.env.BASE_URL}main-logo.png`}
+            className="w-12"
+          />
           <h3 className="hidden xl:block">Yakobus Iryanto</h3>
         </div>
         <div className="hidden xl:flex w-2/5 justify-between">
@@ -94,7 +97,10 @@ function Navbar() {
               <div className="flex flex-col ">
                 <SheetHeader>
                   <SheetTitle>
-                    <img src="/main-logo.png" className="w-12" />
+                    <img
+                      src={`${import.meta.env.BASE_URL}main-logo.png`}
+                      className="w-12"
+                    />
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-4 pt-4">

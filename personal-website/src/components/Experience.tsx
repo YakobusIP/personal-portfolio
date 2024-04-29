@@ -68,7 +68,10 @@ function Experience() {
             >
               <Button className="w-full xl:w-fit">
                 <div className="flex gap-2 justify-center items-center">
-                  <img src="/logo/gcp.png" className="h-4" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}logo/gcp.png`}
+                    className="h-4"
+                  />
                   Google ACE Certificate
                 </div>
               </Button>

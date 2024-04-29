@@ -27,7 +27,7 @@ function SkillProgress({ name, image_path, ability, experience }: Props) {
 
   return (
     <div className="flex items-center justify-center gap-2">
-      <img src={image_path} className="w-10" />
+      <img src={`${import.meta.env.BASE_URL}${image_path}`} className="w-10" />
       <div className="flex flex-col gap-2 w-full">
         <div className="flex items-center justify-between gap-4">
           <p>{name}</p>
