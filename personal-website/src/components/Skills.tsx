@@ -182,7 +182,7 @@ function Skills() {
         <div className="flex w-full justify-around items-end">
           <img
             className="hidden xl:block w-[28rem] 2xl:w-[28rem] 3xl:w-[32rem]"
-            src="/secondary-photo.png"
+            src={`${import.meta.env.BASE_URL}secondary-photo.png`}
           />
           <div className="flex flex-col w-full xl:w-1/2 pb-8 xl:pb-16 gap-4">
             <div className="flex justify-between items-center">

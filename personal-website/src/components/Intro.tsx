@@ -21,7 +21,7 @@ function Intro() {
         <div>
           <img
             className="w-[28rem] 2xl:w-[26rem] 3xl:w-[32rem]"
-            src="/my-photo.png"
+            src={`${import.meta.env.BASE_URL}my-photo.png`}
           />
         </div>
       </div>
