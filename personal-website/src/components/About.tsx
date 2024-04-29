@@ -12,7 +12,7 @@ import { Separator } from "@/components/ui/separator";
 
 function About() {
   return (
-    <section className="flex w-full h-[90vh] 3xl:h-[80vh] bg-white text-black items-center">
+    <section className="flex w-full h-fit bg-white text-black items-center py-16">
       <div className="flex w-4/5 items-center justify-around mx-auto">
         <Card className="h-fit">
           <CardHeader>
