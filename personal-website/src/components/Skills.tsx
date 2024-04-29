@@ -20,25 +20,25 @@ function Skills() {
   const languageSkills = [
     {
       name: "JavaScript/TypeScript",
-      image_path: "/logo/javascript.png",
+      image_path: "logo/javascript.png",
       ability: 80,
       experience: "2 Years"
     },
     {
       name: "Python",
-      image_path: "/logo/python.png",
+      image_path: "logo/python.png",
       ability: 70,
       experience: "1 Year"
     },
     {
       name: "Go",
-      image_path: "/logo/go.png",
+      image_path: "logo/go.png",
       ability: 70,
       experience: "6 Months"
     },
     {
       name: "Ruby",
-      image_path: "/logo/ruby.png",
+      image_path: "logo/ruby.png",
       ability: 60,
       experience: "3 Months"
     }
@@ -47,31 +47,31 @@ function Skills() {
   const frameworkSkills = [
     {
       name: "React",
-      image_path: "/logo/react.png",
+      image_path: "logo/react.png",
       ability: 80,
       experience: "2 Years"
     },
     {
       name: "Vue",
-      image_path: "/logo/vue.png",
+      image_path: "logo/vue.png",
       ability: 80,
       experience: "1 Year"
     },
     {
       name: "Express",
-      image_path: "/logo/express.png",
+      image_path: "logo/express.png",
       ability: 80,
       experience: "2 Years"
     },
     {
       name: "Ruby on Rails",
-      image_path: "/logo/rails.png",
+      image_path: "logo/rails.png",
       ability: 60,
       experience: "3 Months"
     },
     {
       name: "Python Django",
-      image_path: "/logo/django.png",
+      image_path: "logo/django.png",
       ability: 60,
       experience: "1 Month"
     }
@@ -80,25 +80,25 @@ function Skills() {
   const databaseSkills = [
     {
       name: "PostgreSQL",
-      image_path: "/logo/postgres.png",
+      image_path: "logo/postgres.png",
       ability: 80,
       experience: "2 Years"
     },
     {
       name: "MySQL",
-      image_path: "/logo/mysql.png",
+      image_path: "logo/mysql.png",
       ability: 70,
       experience: "1 Year"
     },
     {
       name: "MongoDB",
-      image_path: "/logo/mongodb.png",
+      image_path: "logo/mongodb.png",
       ability: 70,
       experience: "6 Months"
     },
     {
       name: "Redis",
-      image_path: "/logo/redis.png",
+      image_path: "logo/redis.png",
       ability: 60,
       experience: "3 Months"
     }
@@ -107,19 +107,19 @@ function Skills() {
   const cloudServiceSkills = [
     {
       name: "Google Cloud Platform",
-      image_path: "/logo/gcp.png",
+      image_path: "logo/gcp.png",
       ability: 70,
       experience: "6 Months"
     },
     {
       name: "Netlify",
-      image_path: "/logo/netlify.png",
+      image_path: "logo/netlify.png",
       ability: 70,
       experience: "6 Months"
     },
     {
       name: "Vercel",
-      image_path: "/logo/vercel.png",
+      image_path: "logo/vercel.png",
       ability: 60,
       experience: "1 Month"
     }
@@ -128,13 +128,13 @@ function Skills() {
   const toolSkills = [
     {
       name: "Git",
-      image_path: "/logo/git.png",
+      image_path: "logo/git.png",
       ability: 90,
       experience: "3 Years"
     },
     {
       name: "Docker",
-      image_path: "/logo/docker.webp",
+      image_path: "logo/docker.webp",
       ability: 70,
       experience: "1 Year"
     }
