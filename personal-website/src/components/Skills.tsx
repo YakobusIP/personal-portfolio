@@ -173,7 +173,7 @@ function Skills() {
       <div className="flex flex-col w-4/5 items-center justify-center mx-auto gap-16">
         <div className="flex flex-col">
           <h1 className="text-left xl:text-center">Skills</h1>
-          <p className="[&:not(:first-child)]:mt-4 text-left xl:text-center">
+          <p className="[&:not(:first-child)]:mt-4 text-justify xl:text-center">
             I leverage a diverse toolkit of modern technologies to bring your
             web development vision to life. Explore my skillset to see how I can
             contribute to your project.

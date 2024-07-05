@@ -185,7 +185,7 @@ function Projects() {
       <div className="flex flex-col w-4/5 mx-auto gap-4">
         <div className="flex flex-col">
           <h1>Projects</h1>
-          <p className="[&:not(:first-child)]:mt-4">
+          <p className="[&:not(:first-child)]:mt-4 text-justify">
             My portfolio showcases a variety of projects I've tackled, from
             simple websites to complex applications. Dive in and see how I've
             applied my skills to solve real-world challenges.
