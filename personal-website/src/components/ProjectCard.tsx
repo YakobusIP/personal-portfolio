@@ -16,6 +16,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { FaGithub } from "react-icons/fa";
 
 type TechStackItem = {
   name: string;
@@ -52,9 +53,11 @@ function ProjectCard({
     <Card className="h-fit">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="text-justify">
+          {description}
+        </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="text-justify">
         <div className="flex flex-col gap-4">
           <div className="flex flex-wrap gap-2">
             {badges.map((badge, index) => {
@@ -94,10 +97,7 @@ function ProjectCard({
                 <Tooltip>
                   <TooltipTrigger className="w-full" asChild>
                     <Button className="w-full gap-2">
-                      <img
-                        src={`${import.meta.env.BASE_URL}icons/github.webp`}
-                        className="w-4"
-                      />
+                      <FaGithub size={20} />
                       {link.label}
                     </Button>
                   </TooltipTrigger>
@@ -115,10 +115,7 @@ function ProjectCard({
               className="w-full"
             >
               <Button className="w-full gap-2">
-                <img
-                  src={`${import.meta.env.BASE_URL}icons/github.webp`}
-                  className="w-4"
-                />
+                <FaGithub size={20} />
                 {link.label}
               </Button>
             </a>

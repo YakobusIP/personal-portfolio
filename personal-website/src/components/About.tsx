@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { useScrollContext } from "@/contexts/ScrollContext";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function About() {
   const { aboutRef } = useScrollContext();
@@ -45,6 +46,20 @@ function About() {
                 <p className="font-bold">Nationality</p>
                 <p>Indonesian</p>
               </div>
+              <div className="flex flex-col">
+                <p className="font-bold">Other links</p>
+                <div className="flex gap-2">
+                  <a href="https://github.com/YakobusIP" target="_blank">
+                    <FaGithub size={24} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/yakobus-iryanto-prasethio/"
+                    target="_blank"
+                  >
+                    <FaLinkedin size={24} />
+                  </a>
+                </div>
+              </div>
               <Separator />
             </div>
           </CardContent>
@@ -61,7 +76,7 @@ function About() {
             </a>
           </CardFooter>
         </Card>
-        <div className="w-full xl:w-3/5">
+        <div className="w-full xl:w-3/5 text-justify">
           <h1>About Me</h1>
           <p className="[&:not(:first-child)]:mt-4 text-muted-foreground">
             A final year student studying Information Technology at Institut
