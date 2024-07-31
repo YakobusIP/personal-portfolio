@@ -13,7 +13,7 @@ function LabproExperience() {
       <CardHeader>
         <CardTitle>Programming Laboratory Assistant</CardTitle>
         <div className="flex flex-col xl:flex-row xl:items-center gap-2">
-          <CardDescription>July 2022 - Present</CardDescription>
+          <CardDescription>July 2022 - July 2024</CardDescription>
           <Badge className="w-fit">Lecturer Assistant</Badge>
         </div>
       </CardHeader>
