@@ -26,9 +26,9 @@ export default function AboutMe({ ref, inView }: Props) {
         >
           <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105">
             <CardContent>
-              <h3 className="text-xl font-semibold mb-6 text-white">
+              <h2 className="text-xl font-semibold mb-6 text-white">
                 Personal Data
-              </h3>
+              </h2>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -67,6 +67,7 @@ export default function AboutMe({ ref, inView }: Props) {
                     asChild
                     variant="outline"
                     className="border-gray-600 text-gray-600 hover:bg-gray-800 hover:text-gray-300"
+                    aria-label="Link to GitHub profile"
                   >
                     <Link href="https://github.com/YakobusIP" target="_blank">
                       <SiGithub className="w-4 h-4" />
@@ -76,6 +77,7 @@ export default function AboutMe({ ref, inView }: Props) {
                     asChild
                     variant="outline"
                     className="border-gray-600 text-gray-600 hover:bg-gray-800 hover:text-gray-300"
+                    aria-label="Link to LinkedIn profile"
                   >
                     <Link
                       href="https://www.linkedin.com/in/yakobus-iryanto-prasethio/"
