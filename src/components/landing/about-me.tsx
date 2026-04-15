@@ -100,7 +100,7 @@ export default function AboutMe({ ref, inView }: Props) {
                 backend development and system performance.
               </p>
               <p>
-                Hello! I`&apos;`m Yakobus Iryanto Prasethio, a full-stack
+                Hello! I&apos;m Yakobus Iryanto Prasethio, a full-stack
                 developer based in Indonesia. I graduated from Institut
                 Teknologi Bandung with a degree in Information Technology, and I
                 have a strong interest in backend engineering, scalable systems,
