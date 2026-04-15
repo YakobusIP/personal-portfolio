@@ -95,33 +95,35 @@ export default function AboutMe({ ref, inView }: Props) {
             <h2 className="text-3xl font-bold mb-6 text-white">About Me</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p className="text-gray-400">
-                A final year student studying Information Technology at Institut
-                Teknologi Bandung with a keen interest in the world of web
-                programming.
+                A full-stack developer with 2 years of experience building and
+                maintaining production web applications, with a strong focus on
+                backend development and system performance.
               </p>
               <p>
-                Hello! I&apos;m Yakobus Iryanto Prasethio, an aspiring web
-                developer based in Indonesia. Currently studying Information
-                Technology in Institut Teknologi Bandung, I have a passion for
-                web development and cloud computing.
+                Hello! I`&apos;`m Yakobus Iryanto Prasethio, a full-stack
+                developer based in Indonesia. I graduated from Institut
+                Teknologi Bandung with a degree in Information Technology, and I
+                have a strong interest in backend engineering, scalable systems,
+                and cloud infrastructure.
               </p>
               <p>
                 Professionally, I am currently working as a full-stack developer
-                at PT Noxt Teknologi Indonesia, where I&apos;m instrumental in
-                adding and maintaining the company&apos;s website using React
-                and Django, including improving performance for critical
-                sections of the app.
+                at PT Noxt Teknologi Indonesia, where I contribute to
+                maintaining and improving a production platform for a German
+                client. My work involves backend API development, database
+                design, performance optimization, and resolving real-world
+                production issues.
               </p>
               <p>
-                In my free time, I love to contribute to various projects, such
-                as this personal portfolio website. My technical stack includes
-                proficient use of Typescript, Python, Ruby, and Go, alongside
-                frameworks such as React, Vue, and ShadCN.
+                I have experience working with technologies such as Typescript,
+                Python, and Go, along with frameworks like React and Vue. I also
+                have hands-on experience with cloud platforms and deployment
+                workflows, including CI/CD and containerized services.
               </p>
               <p>
-                Driven by a blend of creativity and analytical skills, I aim to
-                leverage my abilities to solve real-world problems. Nice to meet
-                you!
+                I enjoy solving practical problems and improving system
+                reliability and performance, and I’m always looking to grow by
+                working on larger-scale and more impactful systems.
               </p>
             </div>
           </div>
