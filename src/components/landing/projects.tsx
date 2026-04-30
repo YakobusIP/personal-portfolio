@@ -40,7 +40,7 @@ type Props = {
 export default function Projects({ ref, inView }: Props) {
   const projects: Project[] = [
     {
-      title: "Valsewa",
+      title: "SuperApp Kemenkum PASTI",
       description:
         "A government application to centralize every service offered by the Indonesian Ministry of Law.",
       year: 2025,
@@ -72,7 +72,7 @@ export default function Projects({ ref, inView }: Props) {
     {
       title: "Recruitment Plus",
       description:
-        "A website for handling complex recruitment pipeline, part of the Klola HRMS.",
+        "A website for handling complex recruitment pipeline, part of the Klola HRMS. Includes 8-step pipeline orchestrated using Temporal.io for asynchronous processing and durable state execution.",
       year: 2025,
       status: ProjectStatus.PROJECT_COMPLETED,
       tech: ["Go (Huma)", "PostgreSQL", "Temporal.io", "Zitadel"],
