@@ -42,14 +42,44 @@ export default function Projects({ ref, inView }: Props) {
     {
       title: "Valsewa",
       description:
+        "A government application to centralize every service offered by the Indonesian Ministry of Law.",
+      year: 2025,
+      status: ProjectStatus.PROJECT_COMPLETED,
+      tech: ["NestJS", "PostgreSQL", "Temporal.io", "Keycloak"],
+      links: [
+        {
+          label: "Live Application",
+          url: "https://pasti.kemenkum.go.id/",
+          icon: ExternalLinkIcon
+        }
+      ]
+    },
+    {
+      title: "Valsewa",
+      description:
         "A catalog application for renting accounts in Valorant, complete with an admin panel as well as the public facing catalog.",
       year: 2025,
       status: ProjectStatus.PROJECT_COMPLETED,
       tech: ["Next.js", "React", "Express", "PostgreSQL", "AWS"],
       links: [
         {
-          label: "Live Demo",
+          label: "Live Application",
           url: "https://valsewa.com",
+          icon: ExternalLinkIcon
+        }
+      ]
+    },
+    {
+      title: "Recruitment Plus",
+      description:
+        "A website for handling complex recruitment pipeline, part of the Klola HRMS.",
+      year: 2025,
+      status: ProjectStatus.PROJECT_COMPLETED,
+      tech: ["Go (Huma)", "PostgreSQL", "Temporal.io", "Zitadel"],
+      links: [
+        {
+          label: "Live Application",
+          url: "https://recplus.klola.app/",
           icon: ExternalLinkIcon
         }
       ]
@@ -63,7 +93,7 @@ export default function Projects({ ref, inView }: Props) {
       tech: ["Next.js", "React", "Express", "PostgreSQL", "Vercel", "GCP"],
       links: [
         {
-          label: "Live Demo",
+          label: "Live Application",
           url: "https://otaku-corner.site",
           icon: ExternalLinkIcon
         },
